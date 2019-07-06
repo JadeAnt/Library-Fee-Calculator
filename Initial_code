@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+d_a, m_a, y_a = map(int,input().split())
+d_e, m_e, y_e = map(int,input().split())
+
+final_fine = int()
+if (d_a == d_e and m_a == m_e and y_a == y_e):
+    final_fine = 0
+elif(d_a > d_e and m_a == m_e and y_a == y_e):
+    final_fine = (d_a - d_e) * 15
+elif(m_a > m_e and y_e == y_a):
+    final_fine = (m_a - m_e) * 500
+elif(y_a > y_e):
+    final_fine = 10000
+
+print(final_fine)
